@@ -12,8 +12,10 @@ public class SaveServiceTest {
     // final 로 선언하여 한번 초기화된 이후 다른 값으로 변경 불가
     // RequiredArgsConstructor 애너테이션으로 인해 생성자 자동 생성, 필드 자동 초기화
     private final BoardSaveValidator validator;
+    private final BoardDataDao boardDataDao;
 
     public void save(BoardDataForm data) {
         validator.check(data);
+        boardDataDao.save(data);
     }
 }
