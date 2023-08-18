@@ -58,11 +58,12 @@ public class BoardDataDao {
             return data;
 
         } catch (Exception e){
+            e.printStackTrace();
             return null;
         }
     }
 
-    public BoardData mapper(ResultSet rs, int i) throws SQLException {
+    public BoardData mapper(ResultSet rs, Integer i) throws SQLException {
         Timestamp modDt = rs.getTimestamp("MODDT");
         return BoardData.builder()
                 .id(rs.getInt("ID"))

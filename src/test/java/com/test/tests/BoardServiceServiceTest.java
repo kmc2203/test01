@@ -29,7 +29,7 @@ public class BoardServiceServiceTest {
     @Autowired
     private InfoService infoService; // 빈 주입
 
-   private BoardDataForm boardData;
+    private BoardDataForm boardData;
 
     // 테스트 실행할 때마다 객체 초기화하기 위함
     private BoardDataForm getData() {
@@ -105,6 +105,7 @@ public class BoardServiceServiceTest {
     void saveResultTest() {
         saveServiceTest.save(boardData);
         BoardData result = infoService.get(boardData.getId());
+        System.out.println(infoService.get(boardData.getId()));
 
         if(result != null){
             assertAll(
@@ -112,7 +113,7 @@ public class BoardServiceServiceTest {
                     () -> assertEquals(boardData.getContent(), boardData.getContent())
             );
         } else {
-            fail("result is null...");
+            fail("result is null");
         }
     }
 
