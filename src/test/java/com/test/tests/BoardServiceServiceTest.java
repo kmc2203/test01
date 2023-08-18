@@ -6,7 +6,6 @@
 package com.test.tests;
 
 import com.test.controller.board.BoardDataForm;
-import com.test.model.Board;
 import com.test.models.board.BoardData;
 import com.test.models.board.BoardValidationException;
 import com.test.models.board.InfoService;

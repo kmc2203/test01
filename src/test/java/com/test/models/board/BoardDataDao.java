@@ -3,7 +3,6 @@
 package com.test.models.board;
 
 import com.test.controller.board.BoardDataForm;
-import com.test.model.Board;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;

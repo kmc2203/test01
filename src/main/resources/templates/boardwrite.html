@@ -12,12 +12,12 @@
         margin-top: 50px;
     }
 
-    .layout > input {
+    .layout input {
         width: 100%;
         box-sizing: border-box;
     }
 
-    .layout > textarea {
+    .layout textarea {
         width: 100%;
         height: 500px;
         box-sizing: border-box;
@@ -29,9 +29,11 @@
 
 <body>
     <div class="layout">
-        <input type="text">
-        <textarea></textarea>
-        <button>작성</button>
+        <form action="/board/writesubmit" method="post">
+            <input name="title" type="text" placeholder="제목을 작성하세요">
+            <textarea name="content" placeholder="내용을 작성하세요"></textarea>
+            <button type="submit">작성</button>
+        </form>
     </div>
 </body>
 </html>
